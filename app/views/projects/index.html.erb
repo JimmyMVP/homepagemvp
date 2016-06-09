@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Projects</h1>
+
+
+
+    <% @projects.each do |project| %>
+      <div class="pCircle">
+       </div>
+    <div class="pCircle">
+      <td> <%= project.title %></td>
+      <td><%= link_to 'Show', project, class: 'blueb'%></td>
+      <td><%= link_to 'Edit', edit_project_path(project) , class: 'b'%></td>
+      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'redb' %></td>
+    </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Project', new_project_path, class: 'blueb' %>

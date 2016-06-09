@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table class="table-classic">
+  <thead>
+    <tr>
+      <th>Nick</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.nick %></td>
+        <td>
+          <%= link_to 'Show', user, class: "blueb" %>
+          <%= link_to 'Edit', edit_user_path(user), class: "whiteb" %>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "redb" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

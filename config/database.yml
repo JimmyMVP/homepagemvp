@@ -10,6 +10,21 @@ default: &default
   username: homepage
   password: homepage
 
+
+openshift: &openshift
+  adapter: postgresql
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  host:   <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:   <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+
+heroku: &heroku
+    adapter: postgresql
+    host: localhost
+    username: marinvp
+    database: homep
+
 development:
   <<: *default
   # adapter: postgresql
@@ -27,9 +42,4 @@ test:
   <<: *default
 
 production:
-  adapter: postgresql
-  database: <%=ENV['OPENSHIFT_APP_NAME']%>
-  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
-  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
-  host:   <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
-  port:   <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  <<: *heroku

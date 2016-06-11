@@ -25,7 +25,6 @@ $(document).ready(function () {
 
 
     var el = $(".page-notice")
-    console.log("Hello from script")
     children = split(el)
 
     if(children.length !== 0)

@@ -4,8 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <%=
+    display_meta_tags site: 'Marin Vlastelica', name: 'Marin Vlastelica',
+                      description:
+                          'Marin Vlastelica Pogancic student of CS at the  Karlsruhe Institute of Technology'\
+                          'and Faculty of Electrical Engineering and Computing.',
+                      keywords: 'CS student Karlsruhe Split data science machine learning homepage' \
+                                'homepage portfolio Marin Vlastelica Pogancic Zagreb KIT Institute Technology' \
+                                'Fakultet elektrotehnike i racunarstva'
+    %>
   <title>Starter Template for Bootstrap</title>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -16,6 +23,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

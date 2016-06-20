@@ -1,5 +1,30 @@
 #div-buttons {
 
-  margin-top: 2em;
+  margin-top: 10%;
+
+}
+
+
+.div-button {
+  @extend .container, .col-lg-6, .col-md-6, .col-sm-6;
+  @extend .text-center;
+  position: relative;
+  margin-bottom: 1em;
+  align-content: center;
+  height: 12em;
+  border-radius: 5px;
+  opacity: 10;
+  background-color: rgba(200,200,200, $opacity);
+}
+
+
+.visits {
+
+  color: black;
+  margin-top: 5em;
+
+  h4 {
+    color: black;
+  }
 
 }

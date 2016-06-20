@@ -15,9 +15,13 @@
 @import "bootstrap-sprockets";
 @import  "bootstrap";
 
+//Define all the variables before requireing other stylesheets
 $opacity: 0.4;
-
 $blackTransparent: rgba(0,0,0, $opacity);
+
+
+//=require_tree .
+
 
 h1 {
   color: white;
@@ -31,16 +35,6 @@ body {
   background-size: cover;
 }
 
-.visits {
-
-  color: black;
-  margin-top: 5em;
-
-  h4 {
-    color: black;
-  }
-
-}
 
 
 fieldset {
@@ -64,6 +58,16 @@ fieldset {
     color: white;
 
   }
+}
+
+#profile-pic-sm {
+
+  @extend .img-circle;
+  left: 0;
+  top: 7vh;
+  width: 10%;
+  position: fixed;
+  z-index: 100;
 
 }
 
@@ -98,19 +102,6 @@ fieldset {
 }
 
 
-
-.div-button {
-  @extend .container, .col-lg-6, .col-md-6, .col-sm-6;
-  @extend .text-center;
-  position: relative;
-  margin-bottom: 1em;
-  align-content: center;
-  height: 12em;
-  border-radius: 5px;
-  opacity: 10;
-  background-color: rgba(200,200,200, $opacity);
-}
-
 .big {
   font-size: 4em;
   color: #000000;
@@ -144,35 +135,27 @@ fieldset {
   height: 100%;
 }
 
-#top-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+.div-button {
+  @extend .container, .col-lg-6, .col-md-6, .col-sm-6;
+  @extend .text-center;
+  position: relative;
+  margin-bottom: 1em;
+  align-content: center;
+  height: 12em;
+  border-radius: 5px;
+  opacity: 10;
+  background-color: rgba(200,200,200, $opacity);
 }
 
-// Just for main
 
 .shadow {
-
   background-color: rgba(0,0,0,0.4);
-
 }
 
 #main-container {
-  @extend .col-md-offset-1, .col-md-10, .shadow;
-  height: 100%;
-
-}
-
-#div-buttons {
-
-  margin-top: 8em;
-
-}
-
-.pCircle {
-
-  border-radius: 50%;
-  background: cadetblue;
-  border: 3px solid black;
+  @extend  .shadow, .col-lg-offset-1, .col-md-offset-1, .col-lg-10, .col-md-10;
+  @extend .col-sm-12;
+  @extend  .col-xs-12;
+  height: 100vh;
+  padding-top: 7%;
 }

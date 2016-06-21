@@ -21,7 +21,9 @@ function split(element) {
 
 
 
-$(document).ready(function () {
+
+
+$(document).on('page:change', function () {
 
 
     var el = $(".page-notice")
@@ -37,4 +39,4 @@ $(document).ready(function () {
     }
 
 
-})
+});

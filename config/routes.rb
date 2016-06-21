@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   resources :users
-  resources :users
-  resources :users
-  #resources :projects
+  resources :projects
   get 'main/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,7 +10,7 @@ Rails.application.routes.draw do
   root 'main#index'
   resources :users
 
-  get '/projects' => 'main#beingUpdated'
+  #get '/projects' => 'main#beingUpdated'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

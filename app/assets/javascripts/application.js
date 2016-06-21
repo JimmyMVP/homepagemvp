@@ -18,7 +18,7 @@
 
 var hoverColor = 'rgba(0, 0, 200, 0.3)'
 
-$(document).ready(function () {
+$(document).on('page:change', function () {
     
 
     var leaveColor = $(".div-button").css("background-color")

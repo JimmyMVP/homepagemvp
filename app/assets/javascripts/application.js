@@ -10,10 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require_tree .
 
 var hoverColor = 'rgba(0, 0, 200, 0.3)'
